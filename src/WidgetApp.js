@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import './WidStyle.css';
 
-function App({ domElement }) {
+function WidgetApp({ domElement }) {
 
   const attr = domElement.getAttribute("id");
   
   return (
-    <div className="App">         
+    <div className="Widget_app">         
         <h1 style={{textAlign: 'center'}}>
           My First widget width id = {attr}
         </h1>     
@@ -14,4 +14,4 @@ function App({ domElement }) {
   );
 }
 
-export default App;
+export default WidgetApp;

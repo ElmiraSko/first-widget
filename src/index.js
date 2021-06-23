@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import WidgetApp from './WidgetApp';
 
 // const Widget = document.getElementById('first-widget');
 
 // ReactDOM.render(
 //   <React.StrictMode>
-//     <App domElement={Widget}/>
+//     <WidgetApp domElement={Widget}/>
 //   </React.StrictMode>,
 //   Widget
 // );
@@ -17,7 +17,7 @@ window.ReactForm = {
     const Widget = document.getElementById('first-widget');
     ReactDOM.render(
         <React.StrictMode>
-          <App domElement={Widget}/>
+          <WidgetApp domElement={Widget}/>
         </React.StrictMode>,
         Widget
       );
@@ -26,4 +26,6 @@ window.ReactForm = {
     const Widget = document.getElementById('first-widget');
     ReactDOM.unmountComponentAtNode(Widget);
   }
-}
+};
+
+// window.ReactForm.mount();
