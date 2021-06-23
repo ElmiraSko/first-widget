@@ -15,7 +15,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./cjs/react-dom.production.min.js":"i17t"}],"vKFU":[function(require,module,exports) {
 
 },{}],"lY9v":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}function r(t){var r=t.domElement.getAttribute("id");return e.default.createElement("div",{className:"App"},e.default.createElement("header",{className:"App-header"},e.default.createElement("h1",{style:{textAlign:"center"}},"My First widget width id = ",r)))}require("./App.css");var a=r;exports.default=a;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}function r(t){var r=t.domElement.getAttribute("id");return e.default.createElement("div",{className:"App"},e.default.createElement("h1",{style:{textAlign:"center"}},"My First widget width id = ",r))}require("./App.css");var u=r;exports.default=u;
 },{"react":"n8MK","./App.css":"vKFU"}],"Focm":[function(require,module,exports) {
 "use strict";var e=u(require("react")),t=u(require("react-dom"));require("./index.css");var r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}var d=document.getElementById("first-widget");t.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,{domElement:d})),d);
 },{"react":"n8MK","react-dom":"NKHc","./index.css":"vKFU","./App":"lY9v"}]},{},["Focm"], null)
