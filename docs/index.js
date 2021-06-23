@@ -17,5 +17,5 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"lY9v":[function(require,module,exports) {
 "use strict";function e(e){var t=e.domElement.getAttribute("id");return React.createElement("div",{className:"App"},React.createElement("header",{className:"App-header"},React.createElement("h1",{style:{textAlign:"center"}},"My First widget width id = ",t)))}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0,require("./App.css");var t=e;exports.default=t;
 },{"./App.css":"vKFU"}],"Focm":[function(require,module,exports) {
-"use strict";var e=u(require("react")),t=u(require("react-dom"));require("./index.css");var r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}var d=getElementById("first-widget");t.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,{domElement:d})),d);
+"use strict";var e=u(require("react")),t=u(require("react-dom"));require("./index.css");var r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}var d=document.getElementById("first-widget");t.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,{domElement:d})),d);
 },{"react":"n8MK","react-dom":"NKHc","./index.css":"vKFU","./App":"lY9v"}]},{},["Focm"], null)
