@@ -4,3 +4,50 @@
     height: 100px;
     color: white;
   }
+
+.mform {
+    width: 20%;
+    margin: 20px 20px;
+  }
+
+.inp {
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 4px;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+    padding: 18.5px 14px;
+  }
+  .inp:focus{
+    outline: 0;
+  }
+  .mbutton {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    border: 1px solid #b3cbee;
+    border-radius: 4px;    
+    cursor: pointer;
+    margin: 20px 0;
+    padding: 6px 16px;
+    outline: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    background-color: #b3cbee;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }

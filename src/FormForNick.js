@@ -1,20 +1,13 @@
-const useStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        width: '25ch',
-      },
-    },
-  }));
-  
+import React, {useEffect, useState} from 'react';
+import './WidStyle.css';
+
   export default function FormForNick() {
-    const classes = useStyles();
   
     const [nickName, setNickName] = useState('');
     const [serviceId, setServiceId] = useState('');
+    const [token, setToken] = useState('');
   
      let url = `https://yoshpa-gateway-service.herokuapp.com/order/create`;
-     let token;
   
      const requestOptions = {
       method: 'POST',
@@ -42,34 +35,34 @@ const useStyles = makeStyles((theme) => ({
       body: JSON.stringify({ email: 'elmirasco@gmail.com', password: 'elmira'})
     };
   
-    function getTokenAndSendNick() {
+    function getTokenAndSendNick(event) {
+      event.preventDefault();
       fetch('https://yoshpa-registration-login.herokuapp.com/auth', reqOptions)
       .then(resp => resp.json())
       .then(data => {
         console.log(data)
-        token = data.token
+        setToken(data.token)
         setServiceId(data.userId)
-    //    console.log(token)
-      })
-      .then(console.log(serviceId + ",\n " + nickName + ',\n' + token));
+      });
     //   .then(sendNickname())
     }
+
+    useEffect(()=> {
+      console.log(serviceId + ",\n " + nickName + ',\n' + token)
+    }, [serviceId])
      
     return (
-      <form className={classes.root} noValidate autoComplete="off">
-        <TextField 
+      <form className="mform" noValidate autoComplete="off">
+        <input className="inp"
           id="outlined-basic" 
-          label="Никнэйм" 
-          variant="outlined" 
+          placeholder="Никнэйм" 
           value={nickName}
           onChange={(event)=> setNickName(event.target.value)}
         />
         <div>
-          <Button variant="contained" color="primary" 
-          onClick={getTokenAndSendNick}
-          > 
+          <button onClick={getTokenAndSendNick} className='mbutton'> 
               Оплатить
-          </Button>
+          </button>
         </div>
       </form>
     );
