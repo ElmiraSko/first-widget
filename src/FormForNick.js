@@ -1,11 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import './WidStyle.css';
 
-  export default function FormForNick() {
+  export default function FormForNick({domElement}) {
+    
+    const isCustomStyles = domElement.hasAttribute('customStyles');
+    // console.log(domElement);  
   
     const [nickName, setNickName] = useState('');
     const [serviceId, setServiceId] = useState('');
     const [token, setToken] = useState('');
+    // Стили
+    const [formStyle, setFormStyle] = useState('wform');
+    const [inputStyle, setInputStyle] = useState('winput');
+    const [buttonStyle, setButtonStyle] = useState('wbutton');
   
      let url = `https://yoshpa-gateway-service.herokuapp.com/order/create`;
   
@@ -48,19 +55,25 @@ import './WidStyle.css';
     }
 
     useEffect(()=> {
-      console.log(serviceId + ",\n " + nickName + ',\n' + token)
+      if(isCustomStyles) {
+        const styles = domElement.getAttribute('customStyles');
+        const stylesArr = styles.split(' ');
+        if(stylesArr[0]) {setFormStyle(stylesArr[0])}
+        if(stylesArr[1]) {setInputStyle(stylesArr[1])}
+        if(stylesArr[2]) {setButtonStyle(stylesArr[2])}        
+      }
     }, [serviceId])
      
     return (
-      <form className="mform" noValidate autoComplete="off">
-        <input className="inp"
-          id="outlined-basic" 
+      <form className={formStyle} noValidate autoComplete="off">
+        <input className={inputStyle}
+          id="nick-input" 
           placeholder="Никнэйм" 
           value={nickName}
           onChange={(event)=> setNickName(event.target.value)}
         />
         <div>
-          <button onClick={getTokenAndSendNick} className='mbutton'> 
+          <button onClick={getTokenAndSendNick} className={buttonStyle}> 
               Оплатить
           </button>
         </div>

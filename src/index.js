@@ -8,7 +8,7 @@ const Widget = document.getElementById('first-widget');
 
 ReactDOM.render(
   <React.StrictMode>
-    <FormForNick/>
+    <FormForNick domElement={Widget}/>
   </React.StrictMode>,
   Widget
 );
