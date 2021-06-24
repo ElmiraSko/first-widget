@@ -71,12 +71,10 @@ import './WidStyle.css';
           placeholder="Никнэйм" 
           value={nickName}
           onChange={(event)=> setNickName(event.target.value)}
-        />
-        <div>
-          <button onClick={getTokenAndSendNick} className={buttonStyle}> 
-              Оплатить
-          </button>
-        </div>
+        />       
+        <button onClick={getTokenAndSendNick} className={buttonStyle}> 
+          Оплатить
+        </button>       
       </form>
     );
   }
