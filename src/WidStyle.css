@@ -1,27 +1,32 @@
-.wform {
+.yoshpa-form {
   width: 100%;
   margin: 20px 20px;
-  }
-
-.winput {
+}
+.yoshpa-input { 
   font: inherit;
-  color: currentColor;
-  width: 200px;
+  letter-spacing: inherit;  
   border: 1px solid gray;
   border-radius: 4px;
-  height: 1.1876em;
   display: block;
+  width: 200px;
+  height: 1.1876em;
+  color: currentColor;
   background: none;
-  box-sizing: content-box;
-  letter-spacing: inherit;
+  box-sizing: content-box;  
   animation-duration: 10ms;
   -webkit-tap-highlight-color: transparent;
   padding: 18.5px 14px;
-  }
-.winput:focus{
+}
+.yoshpa-input:focus {
   outline: 0;
 }
-.wbutton {
+.yoshpa-span {
+  display: block;
+  color: rgb(245, 98, 98);
+  font-size: 0.8rem;
+  padding-left: 14px;
+}
+.yoshpa-button {
   color: #ffffff;
   font-size: 0.875rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -29,15 +34,14 @@
   line-height: 1.75;
   letter-spacing: 0.02857em;
   text-transform: uppercase;
+  background-color: #b3cbee;
   border: 1px solid #b3cbee;
-  border-radius: 4px;    
+  border-radius: 4px; 
+  outline: 0;   
   cursor: pointer;
   margin: 20px 0;
-  padding: 6px 16px;
-  outline: 0;
-  /* vertical-align: middle; */
-  -moz-appearance: none;
-  background-color: #b3cbee;
+  padding: 6px 16px;  
+  -moz-appearance: none;  
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
 }

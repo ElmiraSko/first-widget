@@ -8,12 +8,10 @@ const Widget = document.getElementById('first-widget');
 
 ReactDOM.render(
   <React.StrictMode>
-    <FormForNick domElement={Widget}/>
+    <FormForNick />
   </React.StrictMode>,
   Widget
 );
-
-
 //=============================================
 // window.ReactForm = {
 //   mount: () => {
