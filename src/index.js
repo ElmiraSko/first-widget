@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import WidgetApp from './WidgetApp';
 import FormForNick from './FormForNick';
+import regeneratorRuntime from "regenerator-runtime";
 
 const Widget = document.getElementById('first-widget');
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './WidStyle.css';
+import regeneratorRuntime from "regenerator-runtime";
 
 import SockJS from "sockjs-client";
 import Stomp from "webstomp-client";
